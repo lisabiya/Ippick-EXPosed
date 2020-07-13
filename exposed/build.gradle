@@ -23,8 +23,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'me.weishu.exposed:exposed-xposedapi:0.4.5' // The Xposed API
-    implementation('me.weishu:epic:0.8.0-c') { // The AOP Framework
+    api 'me.weishu.exposed:exposed-xposedapi:0.4.5' // The Xposed API
+    api('me.weishu:epic:0.8.0-c') { // The AOP Framework
         exclude group: 'me.weishu.exposed', module: 'exposed-xposedapi'
     }
     implementation 'com.getkeepsafe.relinker:relinker:1.2.3' // for load library
