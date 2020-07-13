@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'me.weishu.exposed:exposed-xposedapi:0.4.5' // The Xposed API
+    implementation('me.weishu:epic:0.8.0-c') { // The AOP Framework
+        exclude group: 'me.weishu.exposed', module: 'exposed-xposedapi'
+    }
+    implementation 'com.getkeepsafe.relinker:relinker:1.2.3' // for load library
+}
+
+group = 'me.weishu.exposed'
+version = '0.8.0'
+
+//apply plugin: 'com.novoda.bintray-release'
+
+//publish {
+//    userOrg = 'twsxtd'
+//    groupId = "${project.group}"
+//    artifactId = "${project.name}"
+//    publishVersion = "${project.version}"
+//    desc = 'Xposed Wrapper in non-root environment'
+//    website = 'https://github.com/android-hacker/exposed'
+//}

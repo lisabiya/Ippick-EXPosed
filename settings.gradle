@@ -1,0 +1,3 @@
+include ':exposed'
+include ':app'
+rootProject.name='IPPick'
