@@ -8,10 +8,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
 
-        <service android:name="me.weishu.exposed.LogcatService"
-            android:process=":logcat"
+        <service
+            android:name="me.weishu.exposed.LogcatService"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true"
+            android:process=":logcat" />
     </application>
 
 </manifest>

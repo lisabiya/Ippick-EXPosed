@@ -3,11 +3,11 @@ package me.weishu.exposed;
 /**
  * XposedClassLoader: use to only load xposed api classes.
  */
-class XposedClassLoader extends ClassLoader {
+public class XposedClassLoader extends ClassLoader {
 
     private ClassLoader mHostClassLoader;
 
-    XposedClassLoader(ClassLoader hostClassLoader) {
+    public XposedClassLoader(ClassLoader hostClassLoader) {
         super(ClassLoader.getSystemClassLoader().getParent()); // BootstrapClassLoader
         mHostClassLoader = hostClassLoader;
     }

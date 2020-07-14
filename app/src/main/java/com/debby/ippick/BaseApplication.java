@@ -2,8 +2,6 @@ package com.debby.ippick;
 
 import android.app.Application;
 
-import java.util.HashMap;
-
 import me.weishu.exposed.ExposedBridge;
 
 /**
@@ -16,7 +14,4 @@ public class BaseApplication extends Application {
         super.onCreate();
         ExposedBridge.initOnce(this, getApplicationInfo(), getClassLoader());
     }
-
-
-
 }
