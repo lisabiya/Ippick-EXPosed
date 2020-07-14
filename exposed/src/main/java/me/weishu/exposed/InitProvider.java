@@ -2,8 +2,10 @@ package me.weishu.exposed;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.util.Log;
 
 /**
  * Create by wakfu on 2020/7/14
@@ -12,7 +14,12 @@ public class InitProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        ExposedBridge.loadModule(getContext());
+        Log.e("InitProvideronCreate", "InitProvider");
+        Context context = getContext();
+        if (context != null) {
+            ExposedBridge.initOnce(context, context.getApplicationInfo(), context.getClassLoader());
+            ExposedBridge.loadModule(context);
+        }
         return false;
     }
 
