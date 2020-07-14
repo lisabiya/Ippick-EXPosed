@@ -25,11 +25,13 @@ public class InitProvider extends ContentProvider {
 
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+        Log.e("InitProvideronCreate", "query");
         return null;
     }
 
     @Override
     public String getType(Uri uri) {
+        Log.e("InitProvideronCreate", "getType");
         return null;
     }
 
@@ -45,6 +47,7 @@ public class InitProvider extends ContentProvider {
 
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
+        Log.e("InitProvideronCreate", "update");
         return 0;
     }
 }
