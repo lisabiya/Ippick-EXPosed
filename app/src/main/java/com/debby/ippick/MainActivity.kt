@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         fabStop.setOnClickListener { view ->
-//            requestStorage2()
             tvMessage.text = getInfo();
         }
         fabStart.setOnClickListener {
@@ -23,14 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getInfo(): String? {
         Log.i("fake", "isModuleActive");
-        Log.i("fake", "isModuleActive");
-        Log.i("fake", "isModuleActive");
-        Log.i("fake", "isModuleActive");
-        Log.i("fake", "isModuleActive");
-        Log.i("fake", "isModuleActive");
-        Log.i("fake", "isModuleActive");
-        Log.i("fake", "isModuleActive");
-        return "hello ,my name is Tom .I am from china"
+        return "获取正常数据成功"
     }
 
 }
