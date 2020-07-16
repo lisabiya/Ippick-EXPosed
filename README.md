@@ -1,5 +1,4 @@
 # Ippick-EXPosed
-IP提取加xposed测试
+侵入性较低的hook apk方案
 
-
-jarsigner apk.apk -keystore my.jks -storepass 904028997 debby -keypass 904028997
+包含解包，编辑，生成，签名一体化
