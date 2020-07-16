@@ -1,4 +1,5 @@
 # Ippick-EXPosed
-侵入性较低的hook apk方案
+> 通过在主manifest中注册provider,获取application
 
-包含解包，编辑，生成，签名一体化
+> 借助 [epic](https://github.com/tiann/epic)实现代码监测
+
